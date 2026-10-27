@@ -1,0 +1,265 @@
+#pragma once
+#include <jni.h>
+
+namespace SDK {
+    struct MinecraftClasses {
+        jclass MinecraftClient;
+        jclass PlayerEntity;
+        jclass ClientPlayerEntity;
+        jclass GameOptions;
+        jclass Entity;
+        jclass ClientWorld;
+        jclass Box;
+        jclass RemotePlayerEntity;
+        jclass LivingEntity;
+        jclass GameRenderer;
+        jclass Camera;
+        jclass Vec3d;
+        jclass GameProfile;
+        jclass Text;
+        jclass SimpleOption;
+        jclass JavaDouble;
+        jclass ParticleManager;
+        jclass InGameOverlayRenderer;
+        jclass InGameHud;
+        jclass ChatHud;
+        jclass ChatHudLine;
+        jclass ArmorStandEntity;
+        jclass KeyBinding;
+        jclass ClientPlayerInteractionManager;
+        jclass ClientPlayNetworkHandler;
+        jclass PlayerListEntry;
+        jclass ServerInfo;
+        jclass EntityHitResult;
+        jclass ChatScreen;
+        jclass HandledScreen;
+        jclass StatusEffectInstance;
+        jclass Hand;
+        jclass Direction;
+        jclass EquipmentSlot;
+        jclass PlayerInventory;
+        jclass Inventory;
+        jclass ItemStack;
+        jclass Item;
+        jclass InventoryScreen;
+        jclass ScreenHandler;
+        jclass Slot;
+        jclass SlotActionType;
+        jclass World;
+        jclass Scoreboard;
+        jclass WorldProperties;
+        jclass BlockPos;
+        jclass BlockEntity;
+        jclass ChestBlockEntity;
+        jclass EnderChestBlockEntity;
+        jclass ShulkerBoxBlockEntity;
+        jclass BarrelBlockEntity;
+        jclass AbstractFurnaceBlockEntity;
+        jclass FurnaceBlockEntity;
+        jclass BlastFurnaceBlockEntity;
+        jclass DispenserBlockEntity;
+        jclass DropperBlockEntity;
+        jclass HopperBlockEntity;
+        bool Ready;
+
+        jmethodID MinecraftClient_getInstance;
+        jfieldID MinecraftClient_player;
+        jfieldID MinecraftClient_options;
+        jfieldID MinecraftClient_world;
+        jfieldID MinecraftClient_gameRenderer;
+        jfieldID MinecraftClient_particleManager;
+        jfieldID MinecraftClient_interactionManager;
+        jfieldID MinecraftClient_crosshairTarget;
+        jfieldID MinecraftClient_currentScreen;
+        jfieldID MinecraftClient_inGameHud;
+        jmethodID MinecraftClient_setScreen;
+        jmethodID MinecraftClient_getNetworkHandler;
+        jmethodID MinecraftClient_getGameProfile;
+        jmethodID MinecraftClient_getCurrentServerEntry;
+
+        jmethodID PlayerEntity_setSprinting;
+        jmethodID PlayerEntity_isSneaking;
+        jmethodID PlayerEntity_isAlive;
+        jmethodID PlayerEntity_getGameProfile;
+        jmethodID PlayerEntity_getAttackCooldownProgress;
+        jmethodID PlayerEntity_getInventory;
+        jfieldID PlayerEntity_currentScreenHandler;
+        jmethodID ClientPlayerEntity_requestRespawn;
+        jfieldID ClientPlayerEntity_renderYaw;
+        jfieldID ClientPlayerEntity_renderPitch;
+        jfieldID ClientPlayerEntity_lastRenderYaw;
+        jfieldID ClientPlayerEntity_lastRenderPitch;
+        jfieldID ClientPlayerEntity_lastYawClient;
+        jfieldID ClientPlayerEntity_lastPitchClient;
+
+        jfieldID GameOptions_keyForward;
+        jfieldID GameOptions_keyBack;
+        jfieldID GameOptions_keyLeft;
+        jfieldID GameOptions_keyRight;
+        jfieldID GameOptions_keyJump;
+        jfieldID GameOptions_keySneak;
+        jfieldID GameOptions_keyAttack;
+        jfieldID GameOptions_keyUse;
+        jmethodID GameOptions_getGamma;
+        jmethodID KeyBinding_isPressed;
+        jmethodID KeyBinding_setPressed;
+        jfieldID KeyBinding_timesPressed;
+
+        jmethodID SimpleOption_getValue;
+        jmethodID SimpleOption_setValue;
+        jfieldID SimpleOption_value;
+        jmethodID JavaDouble_valueOf;
+        jmethodID JavaDouble_doubleValue;
+
+        jmethodID ClientWorld_getEntities;
+        jmethodID ClientWorld_getPlayers;
+
+        jmethodID Entity_getX;
+        jmethodID Entity_getY;
+        jmethodID Entity_getZ;
+        jmethodID Entity_getEyeY;
+        jmethodID Entity_getBoundingBox;
+        jmethodID Entity_setBoundingBox;
+        jmethodID Entity_getWidth;
+        jmethodID Entity_getHeight;
+        jmethodID Entity_getId;
+        jmethodID Entity_getYaw;
+        jmethodID Entity_setYaw;
+        jmethodID Entity_getPitch;
+        jmethodID Entity_setPitch;
+        jmethodID Entity_changeLookDirection;
+        jmethodID Entity_setHeadYaw;
+        jmethodID Entity_setBodyYaw;
+        jmethodID Entity_isInvisible;
+        jmethodID Entity_setFireTicks;
+        jmethodID Entity_setInvisible;
+        jmethodID Entity_isOnGround;
+        jmethodID Entity_isTouchingWater;
+        jmethodID Entity_isInLava;
+        jfieldID Entity_prevX;
+        jfieldID Entity_prevY;
+        jfieldID Entity_prevZ;
+        jfieldID Entity_yaw;
+        jfieldID Entity_pitch;
+        jfieldID Entity_lastYaw;
+        jfieldID Entity_lastPitch;
+        jfieldID Entity_onGround;
+        jfieldID Entity_fallDistance;
+
+        jfieldID Box_minX;
+        jfieldID Box_minY;
+        jfieldID Box_minZ;
+        jfieldID Box_maxX;
+        jfieldID Box_maxY;
+        jfieldID Box_maxZ;
+        jmethodID Box_constructor;
+
+        jmethodID LivingEntity_getHealth;
+        jmethodID LivingEntity_getMaxHealth;
+        jmethodID LivingEntity_getStatusEffects;
+        jmethodID LivingEntity_swingHand;
+        jmethodID LivingEntity_getEquippedStack;
+        jmethodID LivingEntity_isClimbing;
+        jmethodID LivingEntity_isUsingItem;
+        jmethodID LivingEntity_isEating;
+        jmethodID LivingEntity_isBlocking;
+
+        jmethodID StatusEffectInstance_getDuration;
+        jmethodID StatusEffectInstance_getAmplifier;
+        jmethodID StatusEffectInstance_getTranslationKey;
+
+        jmethodID ClientPlayerInteractionManager_attackEntity;
+        jmethodID ClientPlayerInteractionManager_attackBlock;
+        jmethodID ClientPlayerInteractionManager_interactItem;
+        jmethodID ClientPlayerInteractionManager_clickSlot;
+        jmethodID ClientPlayerInteractionManager_syncSelectedSlot;
+        jmethodID ClientPlayNetworkHandler_getProfile;
+        jmethodID ClientPlayNetworkHandler_getPlayerList;
+        jmethodID PlayerListEntry_getProfile;
+        jmethodID EntityHitResult_getEntity;
+        jfieldID Hand_MAIN_HAND;
+        jfieldID Direction_UP;
+
+        jmethodID PlayerInventory_getSelectedSlot;
+        jmethodID PlayerInventory_setSelectedSlot;
+        jmethodID PlayerInventory_getStack;
+        jmethodID PlayerInventory_getSelectedStack;
+        jfieldID PlayerInventory_selectedSlot;
+        jmethodID Inventory_getStack;
+
+        jfieldID EquipmentSlot_MAINHAND;
+        jfieldID EquipmentSlot_OFFHAND;
+        jfieldID EquipmentSlot_FEET;
+        jfieldID EquipmentSlot_LEGS;
+        jfieldID EquipmentSlot_CHEST;
+        jfieldID EquipmentSlot_HEAD;
+
+        jmethodID ItemStack_isEmpty;
+        jmethodID ItemStack_getItem;
+        jmethodID ItemStack_getCount;
+        jmethodID Item_getTranslationKey;
+
+        jmethodID InventoryScreen_constructor;
+        jfieldID ScreenHandler_syncId;
+        jmethodID ScreenHandler_getSlot;
+        jmethodID Slot_getStack;
+        jfieldID Slot_id;
+        jfieldID SlotActionType_PICKUP;
+        jfieldID SlotActionType_QUICK_MOVE;
+        jfieldID HandledScreen_focusedSlot;
+
+        jmethodID ClientWorld_setTime;
+        jmethodID World_getScoreboard;
+        jmethodID World_getLevelProperties;
+        jmethodID World_setRainGradient;
+        jmethodID World_setThunderGradient;
+        jmethodID WorldProperties_setRaining;
+        jmethodID World_getBlockEntity;
+        jmethodID BlockPos_constructor;
+        jmethodID BlockPos_getX;
+        jmethodID BlockPos_getY;
+        jmethodID BlockPos_getZ;
+        jmethodID BlockEntity_getPos;
+        jmethodID BlockEntity_getBlockState;
+
+        jmethodID GameRenderer_getCamera;
+        jmethodID GameRenderer_getFov;
+        jfieldID GameRenderer_overlayRenderer;
+        jmethodID Camera_getPos;
+        jmethodID Camera_getPitch;
+        jmethodID Camera_getYaw;
+        jmethodID Vec3d_getX;
+        jmethodID Vec3d_getY;
+        jmethodID Vec3d_getZ;
+
+        jmethodID GameProfile_getName;
+        jfieldID GameProfile_name;
+        jfieldID GameProfile_id;
+        jfieldID GameProfile_properties;
+        jmethodID GameProfile_constructor;
+        jmethodID GameProfile_propertiesMethod;
+        jfieldID PlayerEntity_gameProfile;
+        jfieldID PlayerListEntry_profile;
+        jfieldID PlayerListEntry_displayName;
+        jmethodID PlayerListEntry_setDisplayName;
+        jmethodID Text_literal;
+        jmethodID Text_getString;
+        jmethodID InGameHud_getChatHud;
+        jfieldID ChatHud_messages;
+        jmethodID ChatHud_refresh;
+        jmethodID ChatHudLine_constructor;
+        jfieldID ChatHudLine_creationTick;
+        jfieldID ChatHudLine_content;
+        jfieldID ChatHudLine_signature;
+        jfieldID ChatHudLine_indicator;
+        jfieldID Scoreboard_scores;
+        jfieldID Scoreboard_teamsByScoreHolder;
+        jfieldID ServerInfo_address;
+        jmethodID ParticleManager_clearParticles;
+        jmethodID InGameOverlayRenderer_clearFloatingItem;
+    };
+
+    inline MinecraftClasses Classes;
+
+    bool CacheAll(JNIEnv* env);
+}

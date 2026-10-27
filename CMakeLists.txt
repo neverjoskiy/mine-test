@@ -7,6 +7,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FetchContent)
 
+# Allow configuring older third-party CMake projects (e.g. FreeType/MinHook)
+# with modern CMake 4.x.
+set(CMAKE_POLICY_VERSION_MINIMUM "3.5.0")
+
 # Dependencies
 FetchContent_Declare(
     minhook

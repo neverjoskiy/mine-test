@@ -13,6 +13,7 @@
 #include "shift_tap.h"
 #include "storage_esp.h"
 #include "triggerbot.h"
+#include "aim_assist.h"
 #include "minecraft_feature_utils.h"
 
 namespace Features::Runtime {
@@ -41,6 +42,7 @@ namespace Features::Runtime {
             ItemScroller::Tick(env, mc, player);
             MCF::Tick(env, mc, player);
             TriggerBot::Tick(env, mc, player);
+            AimAssist::Tick(env, mc, player);
         }
 
         HUD::Tick(env, mc, player);

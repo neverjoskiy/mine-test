@@ -67,6 +67,11 @@ void c_config::init_config()
         add_option<multi_dropdown_t>("TriggerBot Targets", bool_t{ true, false, false, false }, string_t{ "Players", "Hostiles", "Mobs", "Invisibles" });
         add_option<multi_dropdown_t>("TriggerBot No Hit", bool_t{ true, true }, string_t{ "Eat", "Block" });
         add_option<checkbox_t>("Smart Crits", true);
+        add_option<checkbox_t>("AimAssist", false, true);
+        add_option<slider_float_t>("AimAssist Distance", 4.0f, 1.0f, 6.0f, "%.1f");
+        add_option<slider_float_t>("AimAssist FOV", 90.0f, 20.0f, 360.0f, "%.1f");
+        add_option<slider_float_t>("AimAssist Speed", 2.0f, 0.1f, 10.0f, "%.1f");
+        add_option<checkbox_t>("AimAssist Only Players", true);
         add_option<checkbox_t>("ShiftTap", false, true);
         add_option<checkbox_t>("NoFriendDamage", false, true);
 

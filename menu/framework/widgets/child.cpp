@@ -9,6 +9,7 @@ namespace
     {
         if (name == "HITBOX") return "HitBox";
         if (name == "TRIGGERBOT") return "TriggerBot";
+        if (name == "AIM ASSIST") return "AimAssist";
         if (name == "SHIFT TAP") return "ShiftTap";
         if (name == "NO FRIEND DAMAGE") return "NoFriendDamage";
         if (name == "SPRINT") return "Sprint";

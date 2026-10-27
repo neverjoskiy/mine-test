@@ -30,6 +30,7 @@
 #include "../features/combat/shift_tap.h"
 #include "../features/render/storage_esp.h"
 #include "../features/combat/triggerbot.h"
+#include "../features/combat/aim_assist.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -498,6 +499,13 @@ namespace Hooks {
                 cfg->get<multi_dropdown_t>("TriggerBot Targets").callback,
                 cfg->get<multi_dropdown_t>("TriggerBot No Hit").callback,
                 cfg->get<checkbox_t>("Smart Crits").callback
+            );
+            Features::AimAssist::SetConfig(
+                cfg->get<checkbox_t>("AimAssist").callback,
+                cfg->get<slider_float_t>("AimAssist Distance").callback,
+                cfg->get<slider_float_t>("AimAssist FOV").callback,
+                cfg->get<slider_float_t>("AimAssist Speed").callback,
+                cfg->get<checkbox_t>("AimAssist Only Players").callback
             );
             Features::WorldTweaks::SetFullBright(cfg->get<checkbox_t>("WorldTweaks").callback && cfg->get<checkbox_t>("FullBright").callback);
             Features::WorldTweaks::SetNoRain(cfg->get<checkbox_t>("WorldTweaks").callback && cfg->get<checkbox_t>("No Rain").callback);

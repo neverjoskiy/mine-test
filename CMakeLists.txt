@@ -50,6 +50,7 @@ set(SOURCES
     "core/jni_bridge.cpp"
     "core/hooks.cpp"
     "features/combat/hitbox.cpp"
+    "features/combat/aim_assist.cpp"
     "features/combat/no_friend_damage.cpp"
     "features/combat/shift_tap.cpp"
     "features/combat/triggerbot.cpp"

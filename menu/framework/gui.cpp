@@ -88,15 +88,25 @@ namespace
 
 		gui->begin_group();
 		{
-			widgets->begin_child("TRIGGERBOT");
-			{
-				widgets->checkbox("TriggerBot");
-				widgets->slider_float("TriggerBot Distance");
-				widgets->multi_dropdown("TriggerBot Targets");
-				widgets->multi_dropdown("TriggerBot No Hit");
-				widgets->checkbox("Smart Crits");
-			}
-			widgets->end_child();
+widgets->begin_child("TRIGGERBOT");
+            {
+                widgets->checkbox("TriggerBot");
+                widgets->slider_float("TriggerBot Distance");
+                widgets->multi_dropdown("TriggerBot Targets");
+                widgets->multi_dropdown("TriggerBot No Hit");
+                widgets->checkbox("Smart Crits");
+            }
+            widgets->end_child();
+
+            widgets->begin_child("AIM ASSIST");
+            {
+                widgets->checkbox("AimAssist");
+                widgets->slider_float("AimAssist Distance");
+                widgets->slider_float("AimAssist FOV");
+                widgets->slider_float("AimAssist Speed");
+                widgets->checkbox("AimAssist Only Players");
+            }
+            widgets->end_child();
 
 			widgets->begin_child("NO FRIEND DAMAGE");
 			{

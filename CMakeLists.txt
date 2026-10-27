@@ -96,9 +96,9 @@ set(SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_tables.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_widgets.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_freetype.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/backends/imgui_impl_win32.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/backends/imgui_impl_dx11.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/backends/imgui_impl_opengl3.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_impl_win32.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_impl_dx11.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/imgui_impl_opengl3.cpp"
 )
 
 # JNI

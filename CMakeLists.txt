@@ -41,7 +41,7 @@ include_directories(
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/framework/settings"
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui"
     "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/imgui/backends"
-    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty/stb"
+    "${CMAKE_CURRENT_SOURCE_DIR}/menu/thirdparty"
 )
 
 # Source files
